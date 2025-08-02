@@ -2,7 +2,7 @@ const userInput = window.prompt('Enter a number to check if prime or not');
 
 if (userInput !== null) {
     const number = parseInt(userInput, 10); //convert input string to an integer using base 10
-    if (!isNaN(number)) {
+    if (Number.isInteger(number)) {
         if (isPrime(number)) console.log(`${number} is a prime number`);
         else console.log(`${number} is not a prime number`);
     }
